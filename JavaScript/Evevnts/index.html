@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unordered List with Images</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="images">
+        <li>
+            <img id="parrot" src="./1.jpg" alt="Image 1">   
+        </li>
+        <li>
+            <img id="owl" src="./2.jpg" alt="Image 2">
+        </li>
+        <li>
+            <img id="cat" src="./3.jpeg" alt="Image 3">
+        </li>
+        <li>
+            <img id="cow" src="./4.jpg" alt="Image 4">
+        </li>
+        <li>
+            <img id="dog" src="./5.jpg" alt="Image 5">
+        </li>
+        <li id="google" href="https://google.com/" style="color:black; cursor: pointer">Google</li>
+    </ul>
+
+</body>
+
+<script>
+
+// document.getElementById('owl').addEventListener('click', function(e){
+//     console.log("Owl is Clicked")
+//     e.stopPropagation()
+// },false)
+
+// document.getElementById('images').addEventListener('click', function(e){
+//     console.log("CLicked inside UL")
+    
+// },false)
+
+// document.getElementById('google').addEventListener('click',function(e){
+//     console.log('Clicked Google')
+//     e.preventDefault()
+// },false)
+
+document.querySelector('#images').addEventListener
+('click', function(e){
+    if(e.target.tagName === 'IMG'){
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+        
+    }
+
+   
+    // removeIt.remove()
+    // removeIt.parentNode.removeChild(removeIt)
+    
+})
+
+</script>
+
+</html>

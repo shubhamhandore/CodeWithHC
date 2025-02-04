@@ -4,17 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
 </head>
-<style>
-    .bg-black{
-        background-color: #212121;
-        color: #fff;
-    }
-</style>
+
 <body class="bg-black">
-    <div>
-        <h1 id="title" class="heading">DOM Learning</h1>
-    <p>Lorem ipsum dolor sit amet.</p>
-    </div>
+   
 </body>
+
+<script>
+	const div = document.createElement('div')
+	console.log(div)
+	div.style.backgroundColor = "Green"
+	div.style.padding = "12px"
+	const addText = document.createTextNode("Shubham Handore")
+	div.appendChild(addText)
+
+	document.body.appendChild(div)
+</script>
+
 </html>
